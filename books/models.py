@@ -79,7 +79,7 @@ class Payment(models.Model):
         on_delete=models.CASCADE,
         related_name="payments",
     )
-    Session_url = models.URLField(
+    session_url = models.URLField(
         help_text="URL to Stripe payment session"
     )
 
