@@ -20,6 +20,17 @@ class BookSerializer(serializers.ModelSerializer):
         )
 
 
+class BookListSerializer(BookSerializer):
+    class Meta:
+        model = Book
+        fields = (
+            "id",
+            "title",
+            "author",
+            "daily_fee",
+        )
+
+
 class BorrowerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Borrowing
