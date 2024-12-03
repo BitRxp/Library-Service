@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from books.models import Book
+from books.models import Book, Borrowing
 
 
 class BookSerializer(serializers.ModelSerializer):
@@ -14,3 +14,16 @@ class BookSerializer(serializers.ModelSerializer):
             "inventory",
             "daily_fee",
         )
+
+
+class BorrowerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Borrowing
+        fields = (
+            "borrow_date",
+            "expected_return",
+            "actual_return",
+            "book",
+            "user"
+        )
+
