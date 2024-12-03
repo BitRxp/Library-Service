@@ -1,6 +1,10 @@
 from rest_framework import serializers
 
-from books.models import Book, Borrowing, Payment
+from books.models import (
+    Book,
+    Borrowing,
+    Payment
+)
 
 
 class BookSerializer(serializers.ModelSerializer):
