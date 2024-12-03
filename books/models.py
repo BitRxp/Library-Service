@@ -24,7 +24,7 @@ class Book(models.Model):
     daily_fee = models.DecimalField(
         max_digits=10,
         decimal_places=2,
-        validators=[MinValueValidator("0.01")],
+        validators=[MinValueValidator(Decimal("0.01"))],
         help_text="Daily fee in $USD"
     )
 
